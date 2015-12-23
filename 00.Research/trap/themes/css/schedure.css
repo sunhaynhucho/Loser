@@ -1,0 +1,270 @@
+@CHARSET "UTF-8";
+
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 32px;
+    height: 32px;
+    background: url(images/loading.gif) no-repeat top left transparent;
+}
+
+#timeline {
+    margin-top: 20px;
+    margin-left: 15%;
+    position: relative;
+    width: 70%;
+}
+
+#timeline .step-title {
+    font-size: 2.3em;
+    font-weight: bold;
+    margin: 25px 0 30px 10px;
+}
+
+#timeline #step_info_container {
+    height: 52px;
+    padding-bottom: 7px;
+    padding-top: 10px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    background: #f0f0f0;
+    width: 100%;
+    overflow: hidden;
+}
+
+#timeline #step_info_container .step-header {
+    float: left;
+    height: 52px;
+    background: url('images/arrow.png') no-repeat top right;
+}
+
+#timeline #step_info_container .step-header .step-title {
+    text-align: left;
+    margin: 5px;
+    margin-right: 15px;
+    font-size: 1.4em;
+    color: #999999;
+    display: block;
+    overflow: hidden;
+    line-height: normal;
+}
+#timeline #step_info_container .step-header.checked .step-title {
+    color: #777777;
+}	
+#timeline #step_info_container .step-header.checked .step-title:hover {
+    /*color: #f16c32; /* TEST */
+}
+#timeline #step_info_container .step-header .step-title .step-number {
+    font-size: 1.9em;
+    margin: 5px;
+}
+#timeline #step_info_container .step-header .step-title .step-name {
+    vertical-align: top;
+}
+
+#timeline #step_info_container .step-header.active .step-title  {
+    /* color: #f16c32; /* TEST */
+}
+
+#timeline #step_info_container .step-header .step-info {
+    height: 30px;
+    margin-top: -20px;
+    margin-left: 3.5em;
+    margin-right: 15px;
+    overflow: hidden;
+    line-height: normal;
+}
+
+#timeline .step {
+    width: 100%;
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+#timeline #startDate {
+    float: left;
+}
+#timeline #time_select {
+    overflow: hidden;
+}
+#timeline #time_select .time-select-item,
+#timeline #time_select .time-select-div {
+    float: left;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5px;
+    line-height: 40px;
+    height: 40px;
+    border: 1px solid #cccccc;
+    background: #efefef;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    min-width: 32px;
+}
+
+#timeline #time_select .time-select-item.am-pm {
+    min-width: 55px;
+}
+
+#timeline .bottom-info {
+    margin-top: 10px 
+}
+#timeline .bottom-info div {
+    font-size: 1.2em;
+    line-height: 1.3em;
+}
+#timeline .bottom-info .title {
+    color: #777777;
+    margin-right: 5px;
+    display: inline-block;
+    min-width: 5em;
+}
+#timeline .bottom-info .selected-event-container {}
+#timeline .bottom-info .selected-event-container .name {
+    font-size: 1.4em;
+    line-height: 1.4em;
+    padding-left: 0.3em;
+}
+#timeline .bottom-info .selected-event-container .description {
+    font-size: 0.9em;
+    color: #999999;
+    display: inline-block;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 3px;
+    margin-bottom: 7px;
+}
+#timeline .bottom-info .selected-event-duration-container {}
+#timeline .bottom-info .selected-event-duration-container .time {
+    display: inline-block;
+    padding-left: 20px;
+    background: url(images/clock_20_grey.png) no-repeat left top;
+}
+#timeline .bottom-info .selected-unit-container {}
+#timeline .bottom-info .selected-unit-container .unit {}
+
+#timeline .bottom-info .selected-unit-container .unit,
+#timeline .bottom-info .selected-event-duration-container .time,
+#timeline .bottom-info .selected-event-container .name {
+
+} 
+
+#timeline .button {
+    line-height: 30px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px;
+    background: #efefef;
+    cursor: pointer;
+    border: 1px solid #e5e5e5;
+}
+#timeline .button {
+    width: 100px;
+    height: 30px;	
+}
+#timeline .button:hover,
+#timeline #time_select .time-select-item:hover,
+#timeline #submit_button:hover  {
+    /*color: #f16c32; /* TEST */
+    border: 1px solid #cccccc;
+    background: #f5f5f5;
+}
+#timeline .back-button {
+    font-size: 1.4em;
+    line-height: 1.5em;
+    padding: 0.5em 0.7em;
+    font-weight: bold;
+    margin-top: 30px;	
+    text-decoration: underline;
+    cursor: pointer;
+}
+#timeline .back-button:hover {}
+
+/* links color 1 */
+#timeline .step-title,
+#timeline .back-button,
+#sign_form .zend_form a.forgot_password, 
+.wellcome_message .sign_out_link,
+#sign_form .sign_in h2,
+#sign_form .sign_up h2,
+#timeline .item .event-info div.event-title,
+#timeline .item .unit-info div.unit-title,
+#sign_form .zend_form dt label, 
+#sign_form .zend_form #client__phone_label p.description, 
+#sign_form  div.open_id_label, 
+#sign_form .zend_form a.forgot_password,
+div.wellcome_message h2, 
+div.wellcome_message div.message  {
+	color: #f0f0f0;
+}
+/* links color 2 */
+#timeline #step_info_container .step-header.checked .step-title:hover,
+#timeline #step_info_container .step-header.active .step-title,
+#timeline .back-button:hover {
+	color: #0b3e6f;
+}
+#timeline .event-duration {
+	color: #6cc0df;
+}
+/* links color 3 */
+#timeline .event-price,
+#timeline .location-phone {
+	color: #fdf741;
+}
+/* buttons */
+#timeline #time_select div.time-select-item,
+#timeline #submit_button,
+#timeline div.button,
+#sign_form .zend_form #signin-element #signin,
+#sign_form .zend_form #register-element #register, 
+.wellcome_message a.sign_out_link,
+.reserve_time_btn.soft_button {
+	border: 1px solid #f0f0f0 !important;
+	background: #333333 url(images/ui-bg_dots-small_20_333333_2x2.png) 50% 50% repeat  !important; 
+	color: #ffffff  !important;
+}
+/* buttons hovered */
+#timeline #time_select div.time-select-item:hover,
+#timeline div#submit_button:hover,
+#timeline div.button:hover,
+#sign_form .zend_form #signin-element #signin:hover,
+#sign_form .zend_form #register-element #register:hover,
+.wellcome_message a.sign_out_link:hover {
+	border: 1px solid #ffffff!important; 
+	background: #00498f url(images/ui-bg_dots-small_40_00498f_2x2.png) 50% 50% repeat  !important;
+	color: #ffffff  !important;
+}
+
+
+/*---- flexible timeline colors (analog of classic timeline colors */
+#timeline #time_select .timeline-grid .time-item div.time-select-div.not_worked_time {
+	background:#333333 url(images/ui-bg_dots-small_20_333333_2x2.png) repeat scroll 50%;
+}
+#timeline #time_select .timeline-grid .time-item div.time-select-div.reserved_time {
+	background: #A32D00 url(images/ui-bg_dots-small_30_a32d00_2x2.png) repeat scroll 50%;
+}
+#timeline #time_select .timeline-grid .time-item div.time-select-div.selected {
+	background:#0B58A2 url(images/ui-bg_dots-small_40_00498f_2x2.png) repeat scroll 50%;
+}
+#timeline #time_select .timeline-grid .time-select-div:hover span {
+	color: #ffffff;
+}
+#timeline #time_select .timeline-grid-wrapper {
+	background: #111111;
+	padding: 4px;
+	border: 1px solid #cccccc;
+	border-radius: 5px;	
+	color: #aaaaaa;
+	font-size: 1.2em; /* because  black calendar is bigger also */
+}
+#timeline #time_select .timeline-grid td.time-item {
+	border: 1px dotted #444444;
+}
+#timeline #time_select .timeline-grid .time-select-div.reserved_time:hover span,
+#timeline #time_select .timeline-grid .time-select-div.not_worked_time:hover span {
+	color: #aaaaaa;
+}

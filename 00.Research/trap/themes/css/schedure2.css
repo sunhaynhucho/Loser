@@ -1,0 +1,1654 @@
+@CHARSET "UTF-8";
+
+.loader {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 32px;
+	height: 32px;
+	background: url(images/loading.gif) no-repeat top left transparent;
+}
+
+#timeline {
+    margin-top: 20px;
+    margin-left: 15%;
+    position: relative;
+    width: 70%;
+}
+
+#timeline .step-title {
+	font-size: 2.3em;
+	font-weight: bold;
+	margin: 25px 0 30px 10px;
+}
+
+#timeline #step_info_container {
+	height: 52px;
+	padding-bottom: 7px;
+	padding-top: 10px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    background: #f0f0f0;
+    width: 100%;
+    overflow: hidden;
+}
+
+#timeline #step_info_container .step-header {
+	float: left;
+    height: 52px;
+    background: url('images/arrow.png') no-repeat top right;
+}
+
+#timeline #step_info_container .step-header .step-title {
+    text-align: left;
+    margin: 5px;
+    margin-right: 15px;
+    font-size: 1.4em;
+    color: #999999;
+    display: block;
+    overflow: hidden;
+    line-height: normal;
+}
+#timeline #step_info_container .step-header.checked .step-title {
+	color: #777777;
+}	
+#timeline #step_info_container .step-header.checked .step-title:hover {
+	/*color: #f16c32; /* TEST */
+}
+#timeline #step_info_container .step-header .step-title .step-number {
+    font-size: 1.9em;
+    margin: 5px;
+}
+#timeline #step_info_container .step-header .step-title .step-name {
+	vertical-align: top;
+}
+
+#timeline #step_info_container .step-header.active .step-title  {
+	/* color: #f16c32; /* TEST */
+}
+
+#timeline #step_info_container .step-header .step-info {
+    height: 30px;
+    margin-top: -20px;
+    margin-left: 3.5em;
+    margin-right: 15px;
+    overflow: hidden;
+    line-height: normal;
+}
+
+#timeline .step {
+	width: 100%;
+	margin-right: 5px;
+	overflow: hidden;
+}
+
+#timeline .step.hidden {
+	display: none;
+}
+
+#timeline .item {
+	padding-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #cccccc;
+    overflow: hidden;
+}
+#timeline .item .location-image,
+#timeline .item .category-image,
+#timeline .item .event-image,
+#timeline .item .unit-image {
+    width: 80px;
+    min-height: 80px;
+    float: left;
+    margin-right: 20px;
+}
+#timeline .item .location-image img,
+#timeline .item .category-image img,
+#timeline .item .event-image img,
+#timeline .item .unit-image img {
+	width: 80px;
+}
+#timeline .item .location-image.empty-bg,
+#timeline .item .category-image.empty-bg,
+#timeline .item .event-image.empty-bg,
+#timeline .item .unit-image.empty-bg {
+	background: url('images/bodyBG.png');
+}
+#timeline .item .location-info,
+#timeline .item .category-info,
+#timeline .item .event-info,
+#timeline .item .unit-info {
+    overflow: hidden;
+}
+#timeline .item .location-info .location-title,
+#timeline .item .category-info .category-title,
+#timeline .item .event-info .event-title,
+#timeline .item .unit-info .unit-title {
+    font-size: 1.4em;
+    color: #444444;
+    font-weight: bold;
+}
+#timeline .item .location-info .location-address,
+#timeline .item .event-info .event-duration,
+#timeline .item .unit-info .unit-duration {
+    font-size: 1em;
+    font-weight: bold;
+}
+#timeline #date_start {
+	float: left;
+}
+#timeline #time_select {
+	overflow: hidden;
+}
+#timeline #time_select .time-select-item,
+#timeline #time_select .time-select-div {
+	float: left;
+	width: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 5px;
+    line-height: 40px;
+    height: 40px;
+    border: 1px solid #cccccc;
+    background: #efefef;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    min-width: 32px;
+}
+
+#timeline #time_select .time-select-item.am-pm {
+    min-width: 55px;
+}
+
+#timeline .bottom-info {
+	margin-top: 10px 
+}
+#timeline .bottom-info div {
+	font-size: 1.2em;
+	line-height: 1.3em;
+}
+#timeline .bottom-info .title {
+	color: #777777;
+	margin-right: 5px;
+	display: inline-block;
+	min-width: 5em;
+}
+#timeline .bottom-info .selected-event-container {}
+#timeline .bottom-info .selected-event-container .name {
+	font-size: 1.4em;
+	line-height: 1.4em;
+	padding-left: 0.3em;
+}
+#timeline .bottom-info .selected-event-container .description {
+	font-size: 0.9em;
+	color: #999999;
+	display: inline-block;
+	border-bottom: 1px solid #eeeeee;
+	padding-bottom: 3px;
+	margin-bottom: 7px;
+}
+#timeline .bottom-info .selected-event-duration-container {}
+#timeline .bottom-info .selected-event-duration-container .time {
+	display: inline-block;
+	padding-left: 20px;
+	background: url(images/clock_20_grey.png) no-repeat left top;
+}
+#timeline .bottom-info .selected-unit-container {}
+#timeline .bottom-info .selected-unit-container .unit {}
+
+#timeline .bottom-info .selected-unit-container .unit,
+#timeline .bottom-info .selected-event-duration-container .time,
+#timeline .bottom-info .selected-event-container .name {
+	
+} 
+
+#timeline .button {
+    line-height: 30px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px;
+    background: #efefef;
+    cursor: pointer;
+    border: 1px solid #e5e5e5;
+}
+#timeline .button {
+	width: 100px;
+    height: 30px;	
+}
+#timeline .button:hover,
+#timeline #time_select .time-select-item:hover,
+#timeline #submit_button:hover  {
+	/*color: #f16c32; /* TEST */
+	border: 1px solid #cccccc;
+	background: #f5f5f5;
+}
+#timeline .back-button {
+	font-size: 1.4em;
+	line-height: 1.5em;
+	padding: 0.5em 0.7em;
+	font-weight: bold;
+	margin-top: 30px;	
+	text-decoration: underline;
+    cursor: pointer;
+}
+#timeline .back-button:hover {}
+#timeline .location-phone,
+#timeline .event-price {
+    font-weight: bold;
+    font-size: 1.05em;
+}
+#timeline .event-price .sale-tax {
+	opacity: 0.75;
+}	
+#timeline #client_form .client_form_wrapper,
+#timeline #client_form #additional_fields,
+#timeline #client_form #redeem_code {
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	width: 340px;
+}
+#timeline #client_form dd {
+	margin-left: 0px;
+}	
+#timeline #client_form input[type=text],
+#timeline #client_form textarea,
+#timeline #client_form #phone_description {
+		width: 300px !important;
+}
+#timeline #client_form select {
+	width: 321px !important;
+}
+#timeline #client_form .fixed_prefix {
+	width: 80px !important;
+	margin: 0;
+	padding: 3px 0;
+	font-size: 1.3em;
+	font-weight: normal;
+	text-align: center;
+}
+.fixed_prefix {
+  float: left;
+  line-height: 21px;
+  margin-top: 1px;
+  margin-right: 3px;
+  font-weight: bold;
+}
+#timeline #client_form #client_phone_area_code {
+	width: 80px !important;
+}
+#timeline #client_form #client_phone_number {
+	width: 218px !important;
+}
+#timeline #client_form input[type=text],
+#timeline #client_form select {
+	padding: 7px 10px;
+}
+#timeline .buttons_container {
+	width: 340px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+#timeline #submit_button {
+	font-size: 2em; 
+	line-height: 1.6em;
+    text-align: center;
+    padding: 6px 0;
+    border-radius: 3px;
+    width: 320px;
+    cursor: pointer;
+    background: #efefef;
+    border: 1px solid #e5e5e5;
+    /*color: #f16c32; /* TEST */
+}
+#timeline #errors li {
+	color: #cd0a0a;
+}
+#timeline .step-header.checked .step-title {
+	cursor: pointer;
+}
+#timeline .date_time_container {
+	overflow: hidden;
+}
+/* 
+ Public-timeline Styles 
+ this is added to all ui-color theme files
+
+#timeline .step-title,
+#timeline #step_info_container .step-header.checked .step-title:hover,
+#timeline #step_info_container .step-header.active .step-title,
+#timeline .button:hover,
+#timeline .back-button:hover,
+#timeline #time_select .time-select-item:hover,
+#timeline #submit_button,	
+#timeline #submit_button:hover  {
+  color: #f16c32;
+}
+*/
+
+
+/*----------------------------------
+
+	SignIn Form styles
+
+----------------------------------*/
+#sign_form {}	
+#sign_form .sign_in, #sign_form .sign_up {
+	float: left;
+	width: 48%;
+}
+#sign_form .sign_up {
+	padding-left: 3%;
+	border-left: 1px solid #e5e5e5;
+}
+#sign_form h2 {
+	color: #777777;
+	font-size: 1.6em;
+	margin: 0px;
+}
+#sign_form .zend_form dd {
+	margin-left: 0px;
+}
+#sign_form .zend_form dt {
+	margin-top: 5px;
+}
+#sign_form .zend_form dd input[type=text], 
+#sign_form .zend_form dd input[type=password], 
+#sign_form .zend_form dd select {
+	padding: 4px;
+	border-radius: 3px;
+	border: 1px solid #cccccc;
+	width: 90%;
+}
+#sign_form .zend_form dd select {
+	padding: 3px;
+	margin-right: 4px;
+}
+#sign_form .zend_form #short_session-element p.description {
+	position: relative;
+	top: -17px;
+	left: 24px;
+	clear: both;
+}
+#sign_form .zend_form #short_session {
+	float: left;
+}
+#sign_form .zend_form .sign {
+	padding: 7px;
+}
+#sign_form .zend_form label, 
+#sign_form .zend_form p.description, 
+#sign_form .zend_form .open_id_label, 
+#sign_form .zend_form .forgot_password {
+	color: #777777;
+	margin: 1px 0px;
+	text-decoration: none;
+}
+#sign_form .zend_form #client__phone_area_code {
+	width: 120px !important;
+}
+#sign_form .zend_form #client__phone_number {
+	width: 180px !important; 
+}
+#sign_form ul.errors {
+	padding: 0px;
+	margin: 0px;
+	text-indent: 0px;
+}
+#sign_form ul.errors li {
+	line-height: 1.2em;
+    padding: 0.4em 0;
+    color: #cd0a0a;
+}
+#sign_form .zend_form .forgot_password {
+	float: right;
+	margin: 10px 25px 0 0;
+}
+#sign_form .zend_form .forgot_password:hover {
+	text-decoration: underline;
+}
+#sign_form .zend_form #signin-element {
+	margin-top: 5px;
+}
+#sign_form .zend_form #signin-element #signin,
+#sign_form .zend_form #register-element #register,
+.wellcome_message a.sign_out_link {
+	border-radius: 3px;
+    margin: 0 auto;
+    background: #efefef;
+    border: 1px solid #cdcdcd; 
+    color: #555555;
+    padding: 6px 12px;
+    text-decoration: none;   
+}
+#sign_form .zend_form #signin-element #signin:hover,
+#sign_form .zend_form #register-element #register:hover,
+.wellcome_message .sign_out_link:hover {
+	background: #f0f0f0;
+    border: 1px solid #aaaaaa;
+}
+#sign_form .open_id_label {
+	margin: 0 0 5px 0;
+	color: #777777;
+}
+#sign_form .zend_form #openid {
+	float: left;
+}
+
+.wellcome_message h2 {
+	color: #777777;
+	font-size: 2em;
+	margin: 10px 0px;
+}
+.wellcome_message .message {
+	margin: 20px 0;
+	font-size: 1.2em;
+	color: #444444;
+}
+
+#sign_form .zend_form #signin-element #signin:hover,
+#sign_form .zend_form #register-element #register:hover,
+#sign_form .zend_form .forgot_password, 
+.wellcome_message .sign_out_link:hover {
+	/* color: #3290f1; TEST */
+}
+
+/*----------------------------------
+
+	Password recovery form
+
+----------------------------------*/
+.recovery_form_container #recovery_form {
+	width: 300px;
+	margin: auto;
+}
+
+.recovery_form_container h2 {
+	color: #888888;
+	font-size: 2em;
+	text-shadow: 1px 1px #ffffff;
+	
+}
+
+.recovery_form_container .sign_link a  {
+	color: #666666;
+	font-size: 1.2em;
+}
+.recovery_form_container .sign_link a:hover {
+	color: #2b2b2b;
+}  
+.recovery_form_container input[type=text] {
+	padding: 6px;
+	border-radius: 3px;
+	border: 1px solid #cccccc;
+	width: 285px;	
+}
+.recovery_form_container .zend_form dd {
+	margin: 5px 0px;
+}
+.recovery_form_container .zend_form label {
+	color: #666666;
+	text-shadow: 1px 1px #ffffff;
+	margin: 1px 0px;
+	text-decoration: none;
+}
+.recovery_form_container input[type=submit] {
+	border-radius: 3px;
+    margin: 0 auto;
+    background: #efefef;
+    border: 1px solid #cdcdcd;
+    width: 100%;	 
+    color: #555555;
+    padding: 6px 12px;
+    text-decoration: none;
+}
+.recovery_form_container input[type=submit]:hover {
+	background: #f0f0f0;
+    border: 1px solid #aaaaaa;
+}
+
+#timeline #step_info_container.numbers-only .step-name, 
+#timeline #step_info_container.numbers-only .step-info {
+	display: none;
+}
+
+#timeline #step_info_container.numbers-only .active .step-name {
+	display: inline;
+}
+
+#timeline #step_info_container.numbers-only .active .step-info {
+    display: block;
+}
+
+/*-------------------------------------------------
+
+	Multiple booking related elelents CSS
+
+--------------------------------------------------*/
+.book-another-button {
+	width: 320px;
+	margin: 5px 0 10px 0;
+	padding: 7px 0;
+	border: 1px solid #e5e5e5;
+	border-radius: 4px;
+	background: #efefef;
+	text-align: center;
+	cursor: pointer;
+}
+.book-another-button:hover  {
+	border-color: #cccccc;
+}
+.book-another-button .icon {
+	background: url(images/addnew.png) no-repeat center;
+	display: inline-block;
+	height: 14px;
+	width: 14px;
+	margin: 0 10px -2px 0;
+}
+.book-another-button .link {
+	font-size: 1.2em;
+}
+.book-another-button:hover .link {
+	text-decoration: underline;
+}
+
+#booked_list {
+	
+}
+#booked_list .book-item {
+	 display: inline-block;
+	 position: relative;
+	 margin: 0 10px 10px 0;
+	 border: 1px solid #dddddd;
+	 border-radius: 4px;
+	 background: #fafafa;
+	 padding: 7px 21px 10px 10px;
+}
+#booked_list .book-item:hover {
+	border-color: #cccccc;
+	background: #ffffff;
+}
+#booked_list .book-item.current-booking {
+	border: 1px solid #dddddd;
+	background: #fafafa;
+}
+#booked_list .book-item.current-booking:hover {
+}	
+#booked_list .book-item .event-title {
+	font-size: 1.3em;
+	color: #444444;
+}
+#booked_list .book-item .event-date-time {
+	padding-left: 24px;
+	background: url(/common/images/catalogue/clock_20_grey.png) no-repeat left top;
+	margin: 4px 0 3px 0;
+}
+#booked_list .book-item .unit-title {
+	padding-left: 21px;
+	background: url(images/admin_light.png) no-repeat left top;
+}
+#booked_list .book-item .delete-button {
+	position: absolute;
+	top: 3px;
+	right: 2px;
+	background: url(images/cancel.png) no-repeat left top;
+	width: 16px;
+	height: 16px;
+}
+.clear {
+	clear: both;
+}
+
+/*----------------------------------
+	Timeline grid
+----------------------------------*/
+
+#timeline #time_select .timeline-grid .time-item .time-select-div {
+	border: none;
+	background: none;
+	width: 100%;
+	height: 25px;
+	line-height: 25px;
+	margin: 0px;
+	padding: 0px;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	cursor: pointer;
+}
+
+/*--- !Important! On change styles for time slots remember about 2 modes: 1. Time titles above table; 2. Time titles inside slots. ---*/
+#timeline #time_select .timeline-grid .time-item {
+	border: 1px dotted #dddddd;
+	min-width: 25px;
+}
+#timeline #time_select .timeline-grid-wrapper {
+	margin-left: 30px;
+	display: inline-block;
+}
+#timeline #time_select .timeline-grid {
+	border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#timeline #time_select .timeline-grid.with-titles {
+    width: 400px;	
+}
+
+#timeline #time_select .timeline-grid .time-select-div span {
+	margin: 5px;
+}
+
+#timeline #time_select .timeline-grid.with-titles .time-select-div span {
+    margin: 0px;
+}
+
+#timeline #time_select .timeline-grid td {
+	padding: 0px !important;
+}
+
+#timeline #time_select .timeline-grid .min-title {
+	margin-left: -8px;
+	font-size: 14px;
+}
+
+#timeline #time_select .timeline-grid .hour-title {
+    font-size: 14px;
+    padding-right: 5px;
+}
+
+#timeline #time_select .timeline-grid .time-select-div {
+	background: #ffffff;
+}
+
+#timeline #time_select .timeline-grid .time-item .time-select-div.not_worked_time {
+	background: #dddddd;
+	cursor: default;
+}
+
+#timeline #time_select .timeline-grid .time-item .time-select-div.reserved_time,
+#timeline #time_select .timeline-grid .time-item .time-select-div.reserved_time:hover {
+	background-color: #ffbbaa;
+    cursor: default;
+}
+
+#timeline #time_select .timeline-grid .time-select-div.selected {
+	background-color: #a7e762;
+	border-type: solid;
+}
+#timeline #time_select .timeline-grid .time-select-div:hover span {
+	/* color: green; */ /*defined in each ui-color theme */
+}
+#timeline #time_select .timeline-grid .time-select-div.reserved_time:hover span,
+#timeline #time_select .timeline-grid .time-select-div.not_worked_time:hover span {
+	/* color: #666666; */ /* defined in theme css */
+}
+
+#timeline .license {
+	width: 340px;
+	margin: 0 auto;
+}
+
+#timeline .number-select-container {
+	border: 1px solid #dddddd;
+	background: #f5f5f5;
+	padding: 5px 7px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	float: left;
+	margin-top: 10px;
+	margin-right: 6px;
+}
+#timeline .number-select-container select {
+	width: 45px;
+	height: 20px;
+	border: 1px solid #cccccc;
+}
+
+#timeline #client_form dt label.required {
+	font-weight: bold;
+}
+#timeline #client_form dt label.optional {
+	font-weight: normal;
+}
+
+/*---------    Facebook Login form  -----------*/
+	
+.facebook-form-wrapper {
+	
+	
+}
+.facebook-form-wrapper.logged {
+	
+}
+.facebook-form-wrapper .facebook-image-wrapper {
+	background: #eeeeee;
+	border: 1px solid #dddddd;
+	padding: 5px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+.facebook-form-wrapper .wellcome-message {
+	margin-left: 10px;
+	font-size: 1.3em;
+	position: relative;
+	top: -20px;
+}
+.facebook-form-wrapper .facebook-image-wrapper,
+.facebook-form-wrapper .wellcome-message,
+.facebook-form-wrapper #facebook_login {
+	display: inline-block;	
+}
+
+#timeline .number-select-container > span {
+    position: relative;
+    top: -2px;
+}
+
+
+/*------ Dimka Calendar enhancements ----------*/
+	
+/*	
+#timeline.bootstrap #date_start .ui-datepicker {
+	width: 22em;
+}
+
+#timeline.bootstrap #date_start .ui-datepicker td span, 
+#timeline #date_start .ui-datepicker td a {
+	padding: 0.4em;
+	text-align: center;
+	border-radius: 4px;
+}
+
+#timeline.bootstrap #date_start .ui-datepicker table {
+	font-size: 1.2em;
+}
+
+#timeline.bootstrap #date_start .ui-widget-content {
+	border: none;
+	background: #f5f5f5;
+}
+
+#timeline.bootstrap .ui-widget-header {
+	border: none;
+	background: none;
+	color: #555555;
+	font-size: 1.2em;
+}
+
+#timeline.bootstrap .ui-state-default {
+	border: 1px solid #bbbbbb;
+}
+
+#timeline.bootstrap .ui-state-active {
+	border-color: #357EBD;
+	background: #428BCA;
+	color: #ffffff;
+}
+
+#timeline.bootstrap .ui-icon-circle-triangle-w {
+	background-position: -96px 0px;
+}
+
+#timeline.bootstrap .ui-icon-circle-triangle-e {
+    background-position: -32px 0px;
+}
+
+#timeline.bootstrap .ui-widget-header .ui-icon {
+	background-image: url("/common/css/ui-colors/gray_vcard_black/images/ui-icons_222222_256x240.png");
+}
+*/
+
+
+
+/**************************************
+
+		Weekly timeline 
+		(bootstrap-like styles)
+
+***************************************/
+
+.date_time_container.week.time-grid {}
+.date_time_container.week.startmatirx {}
+
+#date_time_step.prev-next-block-on-top .date_time_container.week .week_timeselect_top {
+	width: 100%;
+	margin-bottom: 15px;
+	text-align: center;
+}
+#date_time_step.prev-next-block-on-top .date_time_container.week .week_timeselect_top .date-title-container {
+	padding: 10px;
+	margin: 5px;
+}
+.date_time_container.week .week_timeselect_top,
+.date_time_container.week .time-select-week-container {
+	display: inline-block;
+	vertical-align: top;
+}
+.date_time_container.week .week_timeselect_top {
+	width: 250px;
+	margin-right: 10px;
+}
+.date_time_container.week .week_timeselect_top .date_title,
+.date_time_container.week .week_timeselect_top .calendar-button-container,
+.date_time_container.week .week_timeselect_top .calendar-button-container .calendar_button {
+	display: inline-block;
+}
+.date_time_container.week .week_timeselect_top .calendar-button-container .calendar_button {
+	margin: -3px 0 -8px 15px;
+	padding: 15px;
+	background: url(images/g_calendar_gray_30.png) no-repeat top left;
+	cursor: pointer;	
+}
+.date_time_container.week .week_timeselect_top .calendar-button-container .calendar_button:hover {
+	opacity: 0.7;
+}
+.date_time_container.week .week_timeselect_top .prev-next-button-container {}
+.date_time_container.week .week_timeselect_top .prev-next-button-container div {
+	display: inline-block;
+}
+.date_time_container.week .week_timeselect_top .prev-next-button-container #calendar div {
+	display: block;
+}
+.date_time_container.week .week_timeselect_top #calendar {
+	position: absolute;
+	z-index: 100;
+	margin-top: 5px;
+	margin-left: 15px;
+}
+
+.date_time_container.week .week_timeselect_top .prev-next-button-container .text-container {
+	padding: 5px;
+	text-align: center;
+	width: 100px;	
+	font-size: 15px;
+	border: 1px solid transparent;
+	border-radius: 2px;
+	
+	background: #f0f0f0;
+	color: #777777;
+}
+.date_time_container.week .week_timeselect_top .prev-next-button-container .left-side-arrow,
+.date_time_container.week .week_timeselect_top .prev-next-button-container .right-side-arrow {
+	position: relative;
+	width: 0;
+	height: 0;
+	top: 11px;
+	border-top: 16px solid transparent;
+	border-bottom: 16px solid transparent;	
+}
+.date_time_container.week .week_timeselect_top .prev-next-button-container .left-side-arrow {
+	border-right: 16px solid  #f0f0f0;
+}
+.date_time_container.week .week_timeselect_top .prev-next-button-container .right-side-arrow {
+	border-left: 16px solid  #f0f0f0;	
+}
+.date_time_container.week .week_timeselect_top .prev-next-button-container .arrow-button {
+	margin-left: 2px;
+}
+.date_time_container.week .week_timeselect_top .prev-next-button-container .arrow-button:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+.date_time_container.week .week_timeselect_top .prev-next-button-container .arrow-button.disable,
+.date_time_container.week .week_timeselect_top .prev-next-button-container .arrow-button.disable:hover {
+	opacity: 0.5;
+	cursor: default;
+}
+.date_time_container.week .week_timeselect_top .prev-next-button-container .arrow-button.disable:hover .text-container {
+	color: #777777;
+}
+.date_time_container.week .week_timeselect_top .prev-next-button-container .left-inner-arrow {
+	margin-right: 10px;
+}
+
+
+
+/*----- Grid head   -----*/
+
+.date_time_container.week .time-select-week-container table th,
+.date_time_container.week  .time-select-week-container table td {
+	text-align: center;
+}
+.date_time_container.week .week_timeselect_top .date-title-container,
+.date_time_container.week  .time-select-week-container table th .day-div {
+	padding: 5px 2px;
+	text-align: center;	
+}
+.date_time_container.week  .time-select-week-container table th .day-div {
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	background: #f0f0f0;
+}
+.date_time_container.week .week_timeselect_top .date-title-container .date_title,
+.date_time_container.week .time-select-week-container table th .day-div {
+	color: #777777;
+	font-size: 12px; /* since we show date in format "20 Oct, Mon"  */	
+	font-weight: normal;
+}
+.date_time_container.week .time-select-week-container table th .day-div {
+	width: 70px;
+	margin: 0px 3px 5px 3px;
+}
+.date_time_container.week  .time-select-week-container table th .day-div.week-end {
+	background: #f5f5f5;
+}
+
+
+
+/*----- Grid content. Common classes   -----*/
+.date_time_container.week.time-grid .time-select-week-container table td .time-select-div {
+	cursor: pointer;
+}
+.date_time_container.week.time-grid .time-select-week-container table td .time-select-div.not_worked_time,
+.date_time_container.week.time-grid .time-select-week-container table td .time-select-div.busy {
+	cursor: default;
+}
+.date_time_container.week.time-grid.leftside-weekly-timeline .time-select-week-container table td .time-select-div:hover,
+.date_time_container.week.time-grid.slots-weekly-timeline .time-select-week-container table td .time-select-div:hover {
+	background: #cdf39c;
+}
+.date_time_container.week.time-grid.leftside-weekly-timeline .time-select-week-container table td .time-select-div.selected,
+.date_time_container.week.time-grid.slots-weekly-timeline .time-select-week-container table td .time-select-div.selected {
+	background: #a7e762;
+}
+.date_time_container.week.time-grid.leftside-weekly-timeline .time-select-week-container table td .time-select-div.busy,
+.date_time_container.week.time-grid.slots-weekly-timeline .time-select-week-container table td .time-select-div.busy:hover {
+	background: #ee8877;
+}
+
+
+
+/*-------------- Grid timeline classes  -------------------*/
+
+
+.date_time_container.week.time-grid.leftside-weekly-timeline .time-select-week-container {
+	margin-left: 20px;
+}
+.date_time_container.week.time-grid.leftside-weekly-timeline .time-select-week-container table {
+	border-bottom: 1px solid #cccccc;
+}
+.date_time_container.week.time-grid.leftside-weekly-timeline .time-select-week-container table .lefttime-select-div {
+	width: 68px;
+}
+.date_time_container.week.time-grid.leftside-weekly-timeline .time-select-week-container table th .day-div {
+	width: 74px; /* fix for 14 Oct, Tue. also look commit #21842 - fix for week-AM\PM-flexible */
+}
+.date_time_container.week.time-grid.leftside-weekly-timeline .time-select-week-container table .time-select-div span,
+.date_time_container.week.time-grid.leftside-weekly-timeline .time-select-week-container table .lefttime-select-div span {
+	display: none;
+	position: relative;
+}
+.date_time_container.week.time-grid.leftside-weekly-timeline .time-select-week-container table .lefttime-select-div.hour-start-div span {
+	display: block;
+	text-align: right;
+	padding: 2px 3px;
+	color: #666666;
+}
+.date_time_container.week.time-grid.leftside-weekly-timeline .time-select-week-container table td .time-select-div,
+.date_time_container.week.time-grid.leftside-weekly-timeline .time-select-week-container table td .lefttime-select-div {
+	border-top: 1px dotted #cccccc;	
+	border-right: 1px solid #cccccc;
+	height: 10px;
+	background: #ffffff;
+}
+.date_time_container.week.time-grid.leftside-weekly-timeline.double-height-slots .time-select-week-container table td .time-select-div,
+.date_time_container.week.time-grid.leftside-weekly-timeline.double-height-slots .time-select-week-container table td .lefttime-select-div {
+	height: 22px;
+}
+.date_time_container.week.time-grid.leftside-weekly-timeline.quad-height-slots .time-select-week-container table td .time-select-div,
+.date_time_container.week.time-grid.leftside-weekly-timeline.quad-height-slots .time-select-week-container table td .lefttime-select-div {
+    height: 40px;
+}
+.date_time_container.week.time-grid.leftside-weekly-timeline .time-select-week-container table td .time-select-div.hour-start-div,
+.date_time_container.week.time-grid.leftside-weekly-timeline .time-select-week-container table td .lefttime-select-div.hour-start-div {
+	border-top: 1px solid #cccccc;
+}
+.date_time_container.week.time-grid.leftside-weekly-timeline .time-select-week-container table td .lefttime-select-div {
+	border-top-color: transparent;	
+}
+.date_time_container.week.time-grid.leftside-weekly-timeline .time-select-week-container table td .time-select-div:hover {
+	border-top: 1px solid #cccccc;
+}
+.date_time_container.week.time-grid.leftside-weekly-timeline .time-select-week-container table td .time-select-div.not_worked_time,
+.date_time_container.week.time-grid.leftside-weekly-timeline .time-select-week-container table td .time-select-div.not_worked_time.busy {
+	background: #eeeeee;
+}
+#timeline .tooltip {
+	position: absolute;
+	opacity: 0.8;
+    margin-left: 10px;
+    
+    padding: 6px 12px;
+    
+    color: #444444;
+    font-size: 15px;
+    background: none repeat scroll 0 0 #f0f0f0;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+}
+.tooltip .tooltip-arrow {
+	position: absolute;
+	width: 20px;
+	height: 11px;	
+	bottom: -11px;
+	left: 0px;
+	margin-left: 5px;
+	background-image: url('images/corner.png');	
+}
+
+#timeline .leftside-weekly-timeline .time-select-div > div.in {
+	width: 100%;
+	height: 100%;
+}
+
+
+
+/*-------------- Slots timeline classes  -------------------*/
+
+.date_time_container.week.time-grid.slots-weekly-timeline .lefttime-div {
+	display: none;
+}
+.date_time_container.week.time-grid.slots-weekly-timeline .time-select-week-container table th .day-div,
+.date_time_container.week.startmatrix .time-select-week-container table th .day-div {
+	width: 80px;
+	margin: 0px 7px 5px 0;
+}
+.date_time_container.week.startmatrix .time-select-week-container table td .time-select-div {
+	font-size: 14px;
+	line-height: 20px;
+}
+.date_time_container.week.time-grid.slots-weekly-timeline .time-select-week-container table td .time-select-div,
+.date_time_container.week.time-grid.slots-weekly-timeline .time-select-week-container table td .lefttime-select-div,
+.date_time_container.week.startmatrix .time-select-week-container table td .time-select-div {
+	margin:  3px 7px 0 2px;
+	padding: 2px 5px;
+	background: #e6e6e6;	
+	border: 1px solid transparent;
+}	
+.date_time_container.week.time-grid.slots-weekly-timeline .time-select-week-container table td .time-select-div,
+.date_time_container.week.time-grid.slots-weekly-timeline .time-select-week-container table td .lefttime-select-div,
+.date_time_container.week.startmatrix .time-select-week-container table td .time-select-div {
+	/* height: 26px; javascript sets element style height now */  
+}
+.date_time_container.week.time-grid.slots-weekly-timeline .time-select-week-container table td .time-select-div.not_worked_time,
+.date_time_container.week.time-grid.slots-weekly-timeline .time-select-week-container table td .time-select-div.not_worked_time.busy {
+	background: #cccccc;
+	color: #999999;
+}
+/**********************************************
+
+		Startmatrix timeline styles
+				
+***********************************************/
+.date_time_container.week.startmatrix .time-select-week-container table td {
+	vertical-align: top;
+}
+.date_time_container.week.startmatrix .time-select-week-container table td .time-select-div,
+.date_time_container.week.startmatrix .time-select-week-container table td .time-select-div.busy:hover {
+	border: 1px solid #cccccc;
+    background: #efefef;
+    color: #2b2b2b;
+	border-radius: 2px;
+	cursor: pointer;
+}
+.date_time_container.week.startmatrix .time-select-week-container table td .time-select-div.busy,
+.date_time_container.week.startmatrix .time-select-week-container table td .time-select-div.busy:hover {
+	opacity: 0.2;
+	cursor: default;	
+}
+.date_time_container.week.startmatrix .time-select-week-container table td .time-select-div:hover,
+.date_time_container.week.startmatrix .time-select-week-container table td .time-select-div.selected {
+	background: #a7e762;
+}
+
+.startmatrix .time-select-week-row .time-select-div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#timeline .day-offset {
+    color: #777777;
+    font-size: 9px;
+    margin-left: -22px !important;
+    margin-top: 12px !important;
+    position: absolute;
+    white-space: nowrap;
+}
+
+#timeline .leftside-weekly-timeline .day-offset {
+	margin-left: 22px !important;
+    margin-top: -2px !important;
+}
+
+#timeline .week.startmatrix .day-offset {
+	margin-left: -12px !important;
+}
+
+
+/******************************
+
+	Bootstrap flexible timeline
+	
+*******************************/
+
+/* date-time step layout */
+#timeline.bootstrap.daily.flexible #date_start,
+#timeline.bootstrap.daily.flexible #time_select {
+	float: none;
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: border-box;
+}
+#timeline.bootstrap.daily.flexible #time_select .timeline-grid-wrapper {
+	display: block; /* fix */
+	margin: 0;
+}
+
+/*---- use col-xs sizes for .long-timeframe and col-sm sizes for .short-timeframe ---*/ 
+@media (min-width: 768px) {
+	#timeline.bootstrap.daily.long-timeframe #date_start {
+		width: 45%;
+		margin-right: 1%;
+	}
+	#timeline.bootstrap.daily.long-timeframe #time_select {
+		width: 54%;
+	}
+}
+/* Extra small devices Phones (<768px) */
+@media (max-width: 767px) {
+	#timeline.bootstrap.daily.long-timeframe #date_start {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	#timeline.bootstrap.daily.long-timeframe #time_select {
+		width: 100%;
+	}
+	#timeline.bootstrap.daily.long-timeframe .date-start-title {
+		display: block;
+	}
+	#timeline.bootstrap.daily.long-timeframe #date_start {
+	   display: none;
+	}
+	#timeline.bootstrap.daily.long-timeframe #date_start .ui-datepicker {
+		width: 100%;
+	}	
+}
+@media (min-width: 992px) {
+	#timeline.bootstrap.daily.short-timeframe #date_start {
+		width: 45%;
+		margin-right: 1%;
+	}
+	#timeline.bootstrap.daily.short-timeframe #time_select {
+		width: 54%;
+	}
+}
+/* Medium devices Desktops (≥992px) */
+@media (max-width: 991px) {
+	#timeline.bootstrap.daily.short-timeframe #date_start {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	#timeline.bootstrap.daily.short-timeframe #time_select {
+		width: 100%;
+	}
+	#timeline.bootstrap.daily.short-timeframe .date-start-title {
+		display: block;
+	}
+	#timeline.bootstrap.daily.short-timeframe #date_start .ui-datepicker {
+		width: 100%;
+	}
+	#timeline.bootstrap.daily.short-timeframe #date_start {
+        display: none;
+	}
+}
+#timeline.bootstrap .date-start-title {
+	margin-bottom: 15px;
+}
+/*  date start title (brief date selector) : for daily (modern and flexible) timelines */
+#timeline.bootstrap.daily .date-start-title {
+	margin-bottom: 25px;
+	display: none;
+}
+#timeline.bootstrap.daily .date-start-title .prev-button,
+#timeline.bootstrap.daily .date-start-title .current-date,
+#timeline.bootstrap.daily .date-start-title .next-button {
+	display: inline-block;
+	vertical-align: top;
+	cursor: pointer;
+}
+#timeline.bootstrap.daily .date-start-title .prev-button.disabled,
+#timeline.bootstrap.daily .date-start-title .next-button.disabled {
+	cursor: default;
+}
+#timeline.bootstrap.daily .date-start-title .prev-button.disabled .glyphicon,
+#timeline.bootstrap.daily .date-start-title .next-button.disabled .glyphicon,
+#timeline.bootstrap.daily .date-start-title .prev-button.disabled:hover .glyphicon,
+#timeline.bootstrap.daily .date-start-title .next-button.disabled:hover .glyphicon {
+	color: #dddddd;
+}
+#timeline.bootstrap.daily .date-start-title .prev-button,
+#timeline.bootstrap.daily .date-start-title .next-button {
+	width: 10%;
+}
+#timeline.bootstrap.daily .date-start-title .next-button {
+	text-align: right;
+}
+#timeline.bootstrap.daily .date-start-title .prev-button .glyphicon,
+#timeline.bootstrap.daily .date-start-title .next-button .glyphicon,
+#timeline.bootstrap.daily .date-start-title .current-date .glyphicon {
+	font-size: 2em;
+	color: #666666;
+} 
+#timeline.bootstrap.daily .date-start-title .prev-button:hover .glyphicon,
+#timeline.bootstrap.daily .date-start-title .next-button:hover .glyphicon,
+#timeline.bootstrap.daily .date-start-title .current-date:hover .glyphicon,
+#timeline.bootstrap.daily .date-start-title .current-date:hover .title {
+	color: #999999;
+}
+#timeline.bootstrap.daily .date-start-title .current-date {
+	width: 77%;
+	text-align: center;
+}
+#timeline.bootstrap.daily .date-start-title .current-date .glyphicon {
+	font-size: 1.5em;
+	position: relative;
+	top: 5px;
+}
+#timeline.bootstrap.daily .date-start-title .current-date .title {
+	font-size: 1.23em;
+	margin-right: 10px;
+}
+
+/*---- Hour and minutes titles  -----*/
+#timeline.bootstrap.daily.flexible #time_select {
+	background: none;
+	border: none;
+	padding: 0;	
+}
+#timeline.bootstrap.daily.flexible #time_select #time_grid {
+	padding: 0;
+	text-align: center; /* to have grid in the center of container */
+}
+#timeline.bootstrap.daily.flexible #time_select #time_grid .timeline-grid-wrapper {
+	text-align: left;
+}
+#timeline.bootstrap.daily.flexible #time_select .timeline-grid {
+	display: block;
+}
+#timeline.bootstrap.daily.flexible #time_select .timeline-grid.with-titles {
+	width: auto;
+} 
+#timeline.bootstrap.daily.flexible .timeline-grid .min-title {
+	display: none;	
+}
+#timeline.bootstrap.daily.flexible .timeline-grid .hour-row .hour-title {
+	position: relative;
+	vertical-align: top;
+	padding: 2px 5px 0 0;
+	border-right: 1px dotted #888888;
+	font-size: 1.1em;	
+}
+#timeline.bootstrap.daily.flexible .timeline-grid  .hour-row .hour-title .dot {
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin-right: -5px;
+	width: 10px;
+	height: 10px;
+	background: #555555;
+	border-radius: 10px;
+	box-shadow: 1px 1px 1px #888888;
+}
+#timeline.bootstrap.daily.flexible .timeline-grid .hour-row .hour-title .dot span {
+	width: 4px;
+	height: 4px;
+	margin: 1px 0 0 1px;
+	border-radius: 5px;
+	background: #f0f0f0;
+	display: inline-block;
+}
+#timeline.bootstrap.daily.flexible .timeline-grid .hour-row .hour-title .info {}
+#timeline.bootstrap.daily.flexible .timeline-grid .hour-row .hour-title .info .time,
+#timeline.bootstrap.daily.flexible .timeline-grid .hour-row .time-items .time-item .time {}
+#timeline.bootstrap.daily.flexible .timeline-grid .hour-row .hour-title .info .am-pm,
+#timeline.bootstrap.daily.flexible .timeline-grid .hour-row .time-items .time-item .am-pm {
+	font-size: 0.7em;
+}
+#timeline.bootstrap.daily.flexible .timeline-grid .hour-row .hour-title .info .day-offset {
+    display: block;
+    position: relative;
+    margin: 0 !important;
+    opacity: 0.7;
+    font-size: 0.7em;   
+}
+#timeline.bootstrap.daily.flexible #time_select .timeline-grid .hour-row .time-items .time-item .day-offset {
+}
+#timeline.bootstrap.daily.flexible #time_select .timeline-grid .hour-row .time-items {
+	padding: 5px 5px 5px 15px !important;
+}
+
+#timeline.bootstrap.daily.flexible #time_select .timeline-grid .hour-row .time-items .time-item {
+	border: none;
+	display: inline-block;
+	margin: 1px;
+}
+#timeline.bootstrap.daily.flexible #time_select .timeline-grid .hour-row .time-items .time-item .time-select-div {
+	float: none;
+	height: auto;
+	line-height: 25px;
+	box-sizing: border-box;
+	
+	padding: 3px 7px;
+	background: #fafafa;
+	border: 1px solid #eeeeee;
+	border-radius: 3px;
+	min-width: 5.5em;
+	box-shadow: 1px 1px 1px #999999;
+}
+#timeline.bootstrap.daily.flexible #time_select .timeline-grid .hour-row .time-items .time-item .time-select-div:hover,
+#timeline.bootstrap.daily.flexible #time_select .timeline-grid .hour-row .time-items .time-item .time-select-div.selected {
+	background: none repeat scroll 0 0 #666666; /* #5caeff; colored */
+	border: 1px solid #666666; /* #5caeff; colored  */
+}	
+#timeline.bootstrap.daily.flexible #time_select .timeline-grid .hour-row .time-items .time-item .time-select-div:hover span,
+#timeline.bootstrap.daily.flexible #time_select .timeline-grid .hour-row .time-items .time-item .time-select-div.selected span {
+	color: #ffffff;
+}
+#timeline.bootstrap.daily.flexible #time_select .timeline-grid .hour-row .time-items .time-item .time-select-div.reserved_time,
+#timeline.bootstrap.daily.flexible #time_select .timeline-grid .hour-row .time-items .time-item .time-select-div.reserved_time:hover {
+	cursor: default;
+	border: 1px solid #eeeeee;
+	box-shadow: none;
+	background: repeating-linear-gradient(
+	  45deg,
+	  #f0f0f0,
+	  #f0f0f0 10px,
+	  #dddddd 10px,
+	  #dddddd 20px
+	);
+}	
+#timeline.bootstrap.daily.flexible #time_select .timeline-grid .hour-row .time-items .time-item .time-select-div.reserved_time span,
+#timeline.bootstrap.daily.flexible #time_select .timeline-grid .hour-row .time-items .time-item .time-select-div.reserved_time:hover span {
+	color: #666666;
+}
+#timeline.bootstrap.daily.flexible #time_select .timeline-grid .hour-row .time-items .time-item .time-select-div.not_worked_time,
+#timeline.bootstrap.daily.flexible #time_select .timeline-grid .hour-row .time-items .time-item .time-select-div.not_worked_time:hover {
+	background: #f0f0f0;
+	border: 1px solid #f0f0f0;
+	opacity: 0.5;
+	cursor: default;
+	box-shadow: none;
+}	
+#timeline.bootstrap.daily.flexible #time_select .timeline-grid .hour-row .time-items .time-item .time-select-div.not_worked_time span,
+#timeline.bootstrap.daily.flexible #time_select .timeline-grid .hour-row .time-items .time-item .time-select-div.not_worked_time:hover span {
+	color: #666666;	
+}
+#timeline.bootstrap .day-offset-warning {
+	padding: 10px;
+}
+#eventForm dt label {
+	color:#ffffff;
+}
+
+#eventForm label {
+	color: #cccccc !important; /* DARK theme */
+}
+
+#eventForm  .ui-state-highlight {
+	color: #ffffff;  /* theme */
+}
+
+#eventForm .zend_form dt label {
+	color: #eeeeee !important; /* DARK theme */
+}
+/*---- Event Date calendar -----*/
+#start_date-block-container h3, #timeline-container h3 {
+	color: #eeeeee !important; /* DARK theme */
+}
+
+
+/*----- Timeline Grid -----*/
+#timeline-container .weekend-message {
+	background:#0B58A2 url(images/ui-bg_dots-medium_30_0b58a2_4x4.png) repeat scroll 50%;
+	border:1px solid #052F57;
+	color:#FFFFFF;
+}
+
+#timeline-container .timeline {
+	background:#111111 url(images/ui-bg_gloss-wave_20_111111_500x100.png) repeat-x scroll 50% top;
+	border:1px solid #eeeeee;
+	color:#D9D9D9;
+}
+	
+.timeline .reserved_time {
+	background: #A32D00 url(images/ui-bg_dots-small_30_a32d00_2x2.png) repeat scroll 50%;
+	border-right:1px solid #CD0A0A !important;
+}
+
+.timeline .selected_time {
+	background:#0B58A2 url(images/ui-bg_dots-small_40_00498f_2x2.png) repeat scroll 50%;
+	border:1px solid #052F57;
+}
+
+.timeline .not_worked_time {
+	background:#333333 url(images/ui-bg_dots-small_20_333333_2x2.png) repeat scroll 50%;
+	border:1px solid #333333;
+}
+
+.timeline .free_time {
+	background: #eeeeee;
+}
+/*------- AUX----------*/
+
+#loading {
+	background: #cbffd4 url(images/ui-bg_diagonals-thick_15_0b3e6f_40x40.png) repeat-x scroll 50%;
+}
+
+#save_button {
+	border: 1px solid #eeeeee; /* theme */
+	color: #ffffff; /* theme */
+}
+.ui-widget-content {
+	border-color: #eeeeee !important;
+}
+
+#save_button:hover {
+	background:#2f2f2f !important; /* theme */
+	border: 1px solid #111111; /* theme */
+}
+
+.event_price {
+	color: #fdf741; /* DARK theme */
+}
+
+.duration {
+	color: #34454d; /* theme */
+}
+
+#events h2 {
+	color: #ffffff;
+}
+
+/* 
+	 Public-timeline Styles 
+	 this is added to all ui-color theme files
+*/
+
+/* links color 1 */
+#timeline .step-title,
+#timeline .back-button,
+#sign_form .zend_form a.forgot_password, 
+.wellcome_message .sign_out_link,
+#sign_form .sign_in h2,
+#sign_form .sign_up h2,
+#timeline .item .event-info div.event-title,
+#timeline .item .unit-info div.unit-title,
+#sign_form .zend_form dt label, 
+#sign_form .zend_form #client__phone_label p.description, 
+#sign_form  div.open_id_label, 
+#sign_form .zend_form a.forgot_password,
+div.wellcome_message h2, 
+div.wellcome_message div.message  {
+	color: #f0f0f0;
+}
+/* links color 2 */
+#timeline #step_info_container .step-header.checked .step-title:hover,
+#timeline #step_info_container .step-header.active .step-title,
+#timeline .back-button:hover {
+	color: #0b3e6f;
+}
+#timeline .event-duration {
+	color: #6cc0df;
+}
+/* links color 3 */
+#timeline .event-price,
+#timeline .location-phone {
+	color: #fdf741;
+}
+/* buttons */
+#timeline #time_select div.time-select-item,
+#timeline #submit_button,
+#timeline div.button,
+#sign_form .zend_form #signin-element #signin,
+#sign_form .zend_form #register-element #register, 
+.wellcome_message a.sign_out_link,
+.reserve_time_btn.soft_button {
+	border: 1px solid #f0f0f0 !important;
+	background: #333333 url(images/ui-bg_dots-small_20_333333_2x2.png) 50% 50% repeat  !important; 
+	color: #ffffff  !important;
+}
+/* buttons hovered */
+#timeline #time_select div.time-select-item:hover,
+#timeline div#submit_button:hover,
+#timeline div.button:hover,
+#sign_form .zend_form #signin-element #signin:hover,
+#sign_form .zend_form #register-element #register:hover,
+.wellcome_message a.sign_out_link:hover {
+	border: 1px solid #ffffff!important; 
+	background: #00498f url(images/ui-bg_dots-small_40_00498f_2x2.png) 50% 50% repeat  !important;
+	color: #ffffff  !important;;
+}
+
+
+/*---- flexible timeline colors (analog of classic timeline colors */
+#timeline #time_select .timeline-grid .time-item div.time-select-div.not_worked_time {
+	background:#333333 url(images/ui-bg_dots-small_20_333333_2x2.png) repeat scroll 50%;
+}
+#timeline #time_select .timeline-grid .time-item div.time-select-div.reserved_time {
+	background: #A32D00 url(images/ui-bg_dots-small_30_a32d00_2x2.png) repeat scroll 50%;
+}
+#timeline #time_select .timeline-grid .time-item div.time-select-div.selected {
+	background:#0B58A2 url(images/ui-bg_dots-small_40_00498f_2x2.png) repeat scroll 50%;
+}
+#timeline #time_select .timeline-grid .time-select-div:hover span {
+	color: #ffffff;
+}
+#timeline #time_select .timeline-grid-wrapper {
+	background: #111111;
+	padding: 4px;
+	border: 1px solid #cccccc;
+	border-radius: 5px;	
+	color: #aaaaaa;
+	font-size: 1.2em; /* because  black calendar is bigger also */
+}
+#timeline #time_select .timeline-grid td.time-item {
+	border: 1px dotted #444444;
+}
+#timeline #time_select .timeline-grid .time-select-div.reserved_time:hover span,
+#timeline #time_select .timeline-grid .time-select-div.not_worked_time:hover span {
+	color: #aaaaaa;
+}
+
+/*  css bug fix */
+#additional_fields .input.ui-widget-content {
+	background: #ffffff;
+	border: 1px #cccccc solid;
+	border-radius: 2px;
+}
+#additional_fields .ui-widget-content,
+#additional_fields .ui-widget-content option {
+	color: #2d2d2d;
+}
+#booking-result-div {
+	color: #ffffff !important;
+}
+/* end of public-timeline styles */
+
+/*---- Weekly timeline colors ---*/
+.date_time_container.week  .time-select-week-container table th .day-div.week-end,
+.date_time_container.week .week_timeselect_top .prev-next-button-container .arrow-button:hover .text-container {
+	color: #026890;
+}
+div.date_time_container.week.time-grid.leftside-weekly-timeline .time-select-week-container table td .time-select-div:hover,
+div.date_time_container.week.time-grid.slots-weekly-timeline .time-select-week-container table td .time-select-div:hover,
+div.date_time_container.week.time-grid.leftside-weekly-timeline .time-select-week-container table td .time-select-div.selected,
+div.date_time_container.week.time-grid.slots-weekly-timeline .time-select-week-container table td .time-select-div.selected,
+div.date_time_container.week.startmatrix .time-select-week-container table td .time-select-div:hover,
+div.date_time_container.week.startmatrix .time-select-week-container table td .time-select-div.selected {
+	background-color: #026890; 
+	color: #ffffff;
+}
+div.date_time_container.week.time-grid.leftside-weekly-timeline .time-select-week-container table td .time-select-div.busy,
+div.date_time_container.week.time-grid.slots-weekly-timeline .time-select-week-container table td .time-select-div.busy:hover {
+	background: #A32D00 url(images/ui-bg_dots-small_30_a32d00_2x2.png) repeat scroll 50%;
+}
+
+.booking-result * {
+	box-shadow: none !important;
+}
+.booking-result .calendar-image .time {
+	color: #222222;
+}
+div.booking-result .details .info-row .title {
+	color: #eeeeee;
+}
+/************************************
+
+		Widget button styles
+
+***********************************/
+#widget_header,
+#widget_footer,
+.powered_by a,
+#widget_header .title a,
+#widget_menu a, 
+#widget_menu a:hover,
+#widget_header div.company-time span,
+#widget_header div.company-time a {
+	color: #ffffff;
+}
+#timeline.bootstrap .date_time_container.week.startmatrix .time-select-week-container table td .time-select-div.selected,
+footer .container,
+#widget_header,
+#widget_footer   {
+    background-color: #333333;
+}
+div.date_time_container.week.time-grid.slots-weekly-timeline .time-select-week-container table td .time-select-div:hover,
+#widget_menu,
+#widget_header div.company-time,
+#widget_content #loading  {
+	background-color: #473c3c;
+}
+#widget_container {
+	border: 2px solid #333333;
+}
+#widget_menu {
+	border-bottom: 1px solid #333333;	
+}
+body.widget div#widget_content {
+	background: #222222 !important;
+	color: #eeeeee;
+}
+
+#facebook_login {
+  display: inline-block;
+  background: url('images/fb_login.png');
+  width: 154px;
+  height: 22px;
+}
+

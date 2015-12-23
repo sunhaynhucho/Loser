@@ -1,0 +1,36 @@
+body {
+	background-color:#eee;
+	margin-top:0;
+	margin-bottom:0;
+        font-family:Tahoma, Geneva, sans-serif;
+}
+
+#header {
+	background-image: url("images/bgheader.png");
+	background-repeat: repeat-x;
+	color: red;
+	padding-left:20pt;
+        border-radius:5px;
+}
+
+#footer {
+        border:solid 1px #dedede;
+        border-radius:5px;
+        height: 26px;
+	background-image: url("images/bgfooter.png");
+	background-repeat: repeat-x;
+	color: yellow;
+
+}
+#upload{
+	margin:0px 0px; padding:5px;
+	font-weight:bold; font-size:1.2em;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:center;
+	background:#f2f2f2;
+	color:#3366cc;
+	border:1px solid #ccc;
+	width:150px;
+	cursor:pointer !important;
+	-moz-border-radius:5px; -webkit-border-radius:5px;
+}

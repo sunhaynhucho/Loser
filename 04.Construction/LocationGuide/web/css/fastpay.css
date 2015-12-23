@@ -1,0 +1,139 @@
+body { 
+    margin: 0px;
+    padding: 0px;
+    /*background-color: #E0DFDB;*/
+    background-color: white;
+    /*background-image: url(images/background.jpg);*/
+    background-position: top center;
+    background-repeat: no-repeat;
+    font-family: Tahoma, Geneva, sans-serif;
+}  
+.left { float: left;}  
+.right { float: right;}  
+
+#header_fastpay {
+    background: url(images/header_bg.png);
+    border-radius:10px 10px 0px 0px;
+}  
+#logo { }  
+#nav_wrapper {  width: 628px; }  
+#top_nav {   width: 100%;  }
+
+#footer_all { /*width: 100%;
+              height: 70px;
+              margin: 0px 0px 0px 0px;
+              /*background-image: url(images/footer_bg.png);
+              background-repeat: repeat;
+              background-color: #98BFFF;
+              font-weight: bold;
+              border-radius:0 0 5px 5px;*/
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 11px;
+    color: #0066CC;
+    background: url(images/brancrup_bg.png)/*#98BFFF*/;
+    font-weight: bold;
+    height: 29px;
+    text-align: center;
+    border-radius:5px 5px 5px 5px;
+}
+#footer_left {  
+    width: 85%;
+    text-align: left;
+    padding: 20px 0px 0px 10px;
+    float: left;
+    font-size: small;
+    font-weight: bold;
+} 
+#footer_right {  text-align: right;
+                 padding: 17px 10px;
+
+}
+
+section { margin: 0px;padding: 0px;}  
+
+#presentation { width: 100%; display: block;float: left;}  
+#presentation_images {  width: 100%; display: block;}  
+#zlcms_corner {  margin-top: -14px; z-index: 10; display: block;}  
+#feature_sets {
+    width: 100%;
+    height: 123px;
+    display: block;
+    overflow: hidden;
+    background-image: url(images/bg_feature2.png);
+    background-position: top left;
+    background-repeat: repeat;
+}
+
+
+
+#feature1 {  
+    width: 40%; float: left;display: block;
+    background-image: url(images/bg_feature.png);
+    background-repeat: repeat; 
+}
+#feature2 {  
+    width: 30%; display: block;
+    float: left;
+    background-image: url(images/feature_line.png); 
+    background-position: top right; 
+    background-repeat: no-repeat; }
+#feature3 {  width: 30%;float: left;
+
+}    
+
+
+#index_col1 { 
+    width: 485px;
+    height: 215px;
+    float: left;
+    overflow: hidden;
+    background-image: url(images/index_col_half.png);
+    background-position: top;background-repeat: repeat-x;margin-right: 10px;display: inline;} 
+#top_article {  width: 490px; height: 65px; padding-top: 30px; padding-left: 10px; padding-bottom: 10px; }   
+#bottom_article {  width: 490px; height: 65px; padding-top: 10px; padding-left: 10px; margin-top: 10px; }   
+.article_date {  
+    width: 60px; height: 65px; background-color: #F4F3F0; -moz-border-radius: 8px; 
+    border-radius: 8px; 
+    float: left;
+}   
+.article_content {  width: 380px; padding-left: 15px; } 
+.article_date H4 { font-size: 15px;color: #A3A19F;text-align: center;margin: 0px;padding: 13px 0px 0px 0px;line-height: 15px;}
+.article_date H5 { font-size: 26px;color: #6D6E70;text-align: center;margin: 0px;padding: 0px;line-height: 28px;}
+.article_content h2 { font-size: 12px;color: #404041;margin: 0px;padding: 3px 0px 5px 0px;line-height: 13px;}
+.article_content P { font-size: 12px;color: #555658;margin: 0px;padding: 0px;line-height: 15px;}
+.article_content h3 a { font-size: 13px;color: #404041;text-decoration: none; }
+.article_content p a { color: #F16A22;text-decoration: none;}
+.article_date H4 { font-size: 15px;
+                   color: #A3A19F;
+                   text-align: center;
+                   margin: 0px;
+                   padding: 13px 0px 0px 0px;
+                   line-height: 15px;
+}
+.article_date H5 { font-size: 26px;
+                   color: #6D6E70;
+                   text-align: center;
+                   margin: 0px;
+                   padding: 0px;
+                   line-height: 28px;
+}
+#index_col2 {
+    width: 198px;
+    height: 175px;
+    overflow: hidden;
+    background-image: url(images/index_col_full.png);
+    background-position: top;
+    background-repeat: repeat-x;
+    margin-right: 10px;
+    padding: 20px 15px;
+}
+
+#index_col3 {
+    width: 197px;
+    height: 175px;
+    overflow: hidden;
+    background-image: url(images/index_col_full.png);
+    background-position: top;
+    background-repeat: repeat-x;
+    padding: 20px 15px;
+}

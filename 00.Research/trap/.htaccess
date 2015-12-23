@@ -1,0 +1,12 @@
+RewriteEngine on
+RewriteRule ^quantrihethong/([a-zA-Z0-9_-]+)$ admin.php?rt=quantrihethong/$1 [L,QSA]
+RewriteRule ^cauhinhgame/([a-zA-Z0-9_-]+)$ admin.php?rt=cauhinhgame/$1 [L,QSA]
+RewriteRule ^login/([a-zA-Z0-9_-]+)$ login.php?rt=login/$1 [L,QSA]
+RewriteRule ^formdialog/([a-zA-Z0-9_-]+)$ ajax.php?rt=ajax/$1 [L,QSA]
+#RewriteRule ^formdialog/([a-zA-Z0-9_-]+) ^formdialog/([a-zA-Z0-9_-]+)
+#RewriteRule ^about/([a-zA-Z0-9_-]+)$ index.php?cat=about&func=$1
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^vn/(.*)$ index.php?lang=vn&rt=$1 [L,QSA]
+#RewriteRule ^en/(.*)$ index.php?lang=en&rt=$1 [L,QSA]
+RewriteRule ^(.*)$ index.php?rt=$1 [L,QSA]

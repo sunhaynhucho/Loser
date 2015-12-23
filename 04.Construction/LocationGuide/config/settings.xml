@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+	<properties>
+		<category name="OPERATOR">
+			<property name="OPE_096" value="VTL"/>
+			<property name="OPE_097" value="VTL"/>
+			<property name="OPE_098" value="VTL"/>
+			<property name="OPE_0161" value="VTL"/>
+			<property name="OPE_0162" value="VTL"/>
+			<property name="OPE_0163" value="VTL"/>
+			<property name="OPE_0164" value="VTL"/>
+			<property name="OPE_0165" value="VTL"/>
+			<property name="OPE_0166" value="VTL"/>
+			<property name="OPE_0167" value="VTL"/>
+			<property name="OPE_0168" value="VTL"/>
+			<property name="OPE_0169" value="VTL"/>
+			<property name="OPE_0160" value="VTL"/>
+			<property name="OPE_090" value="MBF"/>
+			<property name="OPE_093" value="MBF"/>
+			<property name="OPE_0120" value="MBF"/>
+			<property name="OPE_0121" value="MBF"/>
+			<property name="OPE_0122" value="MBF"/>
+			<property name="OPE_0126" value="MBF"/>
+			<property name="OPE_0128" value="MBF"/>
+			<property name="OPE_091" value="VNP"/>
+			<property name="OPE_094" value="VNP"/>
+			<property name="OPE_0123" value="VNP"/>
+			<property name="OPE_0124" value="VNP"/>
+			<property name="OPE_0125" value="VNP"/>
+			<property name="OPE_0127" value="VNP"/>
+			<property name="OPE_0129" value="VNP"/>
+		</category>
+		<category name="JDBC">
+			<property name="URL" value="jdbc:oracle:thin:@(description=(address=(host=localhost)(protocol=tcp)(port=1521))(connect_data=(SERVER = DEDICATED)(service_name=dbhome)))"/>
+			<property name="USERNAME" value="qlst"/>
+			<property name="PASSWORD" value="qlst"/>
+			<property name="SCHEMA" value="qlst"/>
+			<property name="MAX_LIMIT" value="10"/>
+			<property name="MIN_LIMIT" value="5"/>
+			<property name="INITIAL_LIMIT" value="3"/>
+			<property name="CONNECTION_WAIT_TIME_OUT" value="35"/>
+			<property name="ABANDONED_CONNECTION_TIME_OUT" value="300"/>
+			<property name="PROPERTY_CHECK_INTERVAL" value="60"/>
+			<property name="INACTIVITY_TIMEOUT" value="600"/>
+			<property name="MAX_STATMENTS_LIMIT" value="10"/>
+			<property name="AUTO_COMMIT" value="false"/>
+		</category>
+	</properties>
+	

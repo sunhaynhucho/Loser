@@ -1,0 +1,293 @@
+/* 
+    Document   : main
+    Created on : Apr 21, 2015, 10:31:43 AM
+    Author     : KiemPQ
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body {
+    background-color: #4e4e4e;
+    color: #9399A1;
+    background: url(images/bg.jpg) fixed 50%;
+    margin: 0px;
+}
+
+#divHeader{
+    top:0px;
+    margin:0 0 0 0;
+    background: #1a1a1a;
+    color: #C7C7C7;
+    height: 85px;
+    width: 100%;
+    float: none;
+    z-index: 1000;
+    position: fixed;
+}
+#divContent{
+
+}
+
+#divFooter{
+/*    position: fixed;*/
+    bottom: 0px;
+    background: black;
+    width: 100%;
+    height: 40px;
+    padding: 0px;
+    color: #ffffff;
+}
+#divLogo{
+    position: relative;
+    width: 108px;
+    float: left;
+    padding-top: 5px;
+    padding-left: 10px;
+
+}
+#divNav{
+    position: relative;
+    margin-left: 176px;
+    padding-top: 25px;
+    float: left;
+    z-index: 1;
+}
+#divNavEmap{
+    position: relative;
+    margin-left: 376px;
+    padding-top: 25px;
+    float: left;
+}
+#divNavEmap2{
+    position: absolute;
+    margin-left: 276px;
+    padding-top: 155px;
+    float: left;
+}
+#divLanguage{
+    position: relative;
+    padding-top: 28px;
+    padding-left: 1155px;
+    width: 108px;
+    /*  margin: 10px;*/
+}
+
+#divLanguage ul { 
+    padding:0; 
+    margin:0; 
+    list-style-type:none; 
+}
+#divLanguage ul li {
+    padding: 0;
+    margin: 0;
+}
+
+#rt-logo {
+    width: 108px;
+    height: 85px;
+    background: url(images/logo2.png) 50% 0 no-repeat !important;
+    margin: 0;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+#rt-logo-accent {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 14px;
+    left: 219px;
+    z-index: 1;
+    border-radius: 100%;
+}
+
+
+.textlogo{
+/*    position: fixed;*/
+    left: 0px;
+    bottom: -10px;
+
+} 
+.textlogo a{
+    text-decoration: none;
+
+}
+.textlogo2 {
+    color: #ffffff;
+    margin-left: 40px;
+    line-height: 2;
+    /*padding-top: 1px !Imor;*/
+    margin-top: 3px !important;
+
+}
+
+.kispicture {
+    margin-left: 20px;
+    margin-right: 0px;
+}
+
+#divFooter img {
+    max-width: 100%;
+    width: auto \9;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+.created-div{
+/*    position: fixed;*/
+    right: 30px;
+    bottom: -20px;
+}
+.created-div a{
+    text-decoration: none;
+}
+
+.bigestescae {
+    position: absolute;
+    top: 500px;
+    z-index: 40;
+    width: 100%;
+/*    left: 25%;*/
+    text-shadow: 1px 1px 1px black;
+    font-size: 45px;
+    color: white;
+    text-align: center;
+/*    font-family: 'Freestyle Script';*/
+    font-family: 'Open Sans', sans-serif;
+}
+
+.fchworld {
+    position: absolute;
+    left: 20%;
+    /*background: url(images/traplogonagy.png) no-repeat 50% 60%;*/
+    font-size: 24px;
+    width: 390px;
+    height: 500px;
+    line-height: 25px;
+    text-transform: uppercase;
+    top: 145px;
+    color: white;
+    z-index: 2;
+    font-family: 'Conv_Play-Regular', Sans-Serif;
+}
+
+.kistrap {
+    margin-right: 30px;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.fchworld a {
+    text-decoration: none;
+}
+
+.fchworldh1 {
+    font-size: 15px;
+    display: none;
+    line-height: 25px;
+    text-transform: uppercase;
+    margin-left: 85px;
+    color: #C3C2C2;
+    margin-top: 30px;
+    font-family: 'Conv_Play-Regular', Sans-Serif;
+}
+.rt-block {
+    padding: 15px;
+    margin: 10px;
+    position: relative;
+}
+.thegame2 {
+    position: fixed;
+    left: 00px;
+    height: 60px;
+    border-right: 8px solid #00a8f3;
+    width: 100px !important;
+    top: 18.5%;
+    margin-left: -5px;
+    margin-right: 100px;
+    z-index: 9000;
+    background: #323232;
+    text-align: center;
+    width: 8em;
+    margin-top: 4.5em;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.thegame{
+    margin-top: -30px;
+}
+
+.abouttext {
+    color: white;
+    text-transform: uppercase;
+    font-family: impact;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.thegeamtext {
+    margin-top: -45px;
+    color: #00a8f3;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: impact;
+}
+
+.customthegame2 a {
+    text-decoration: none;
+}
+
+.bookingdiv {
+    position: fixed;
+    right: -100px;
+    height: 60px;
+    border-left: 8px solid #00a8f3;
+    width: 100px !important;
+    top: 18.5%;
+    margin-right: 100px;
+    z-index: 900000000000000000000000000000000000000000000;
+    background: #323232;
+    text-align: center;
+    width: 8em;
+    margin-top: 4.5em;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.teljesbuooking{
+    margin-top: -30px;
+}
+.booktext {
+    color: white;
+    text-transform: uppercase;
+    font-family: impact;
+    font-size: 30px;
+    margin-top: 10px;
+}
+.bookimage{
+    /*position: absolute;*/
+    right: 1px;
+    top: 25%;
+    position: fixed;
+}
+.aboutimage{
+    /*position: absolute;*/
+    left: 1px;
+    top: 25%;
+    position: fixed;
+}
+.nowtext {
+    margin-top: -45px;
+    color: #00a8f3;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: impact;
+}
+.custombookingdiv a {
+    text-decoration: none;
+}
